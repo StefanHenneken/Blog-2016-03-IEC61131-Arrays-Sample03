@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4019.2">
+  <POU Name="MAIN" Id="{ae5ed434-881a-4c47-bfdd-dc5c320d3074}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	array01		: ARRAY[1..2, 3..4, 5..6] OF LREAL := [16.1, 34.1, 4.1, 43.1, 35.1, 2.1, 65.1, 16.1];
+	lrSum01		: LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[lrSum01 := F_CalcSum3DimArray(array01);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
